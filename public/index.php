@@ -4,7 +4,7 @@ require __DIR__ . '/../src/db.php';
 
 if (isset($_GET['name']) && isset($_GET['message']))
 {
-    $stmt = db()->prepare('INSERT INTO messages (name, message) VALUES (?, ?)');
+    $stmt = db()->prepare('INSERT INTO reviews (name, message) VALUES (?, ?)');
     $stmt->execute([$_GET['name'], $_GET['message']]);
 
     echo "Message \"" . $_GET['message'] . "\" submitted by " . $_GET['name'];
