@@ -13,7 +13,7 @@ else
 {
     echo "<h1>List of messages</h1>";
 
-    $rows = db()->query('SELECT * FROM messages ORDER BY id DESC')->fetchAll();
+    $rows = db()->query('SELECT * FROM reviews ORDER BY id DESC')->fetchAll();
 
     foreach ($rows as $row)
     {
